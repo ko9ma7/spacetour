@@ -1,0 +1,47 @@
+name: Regenerate SpaceTour repository docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/project-meta.json'
+      - 'data/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate README and metadata files
+        run: npm run meta:generate
+
+      - name: Commit generated docs when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- README.md GITHUB_TOPICS.md .github/repository-metadata.json; then
+            echo "Repository docs are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md GITHUB_TOPICS.md .github/repository-metadata.json
+          git commit -m "chore: refresh SpaceTour repository docs"
+          git pull --rebase origin main
+          git push origin main

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "share-k8r3lmq",
+  "access": "link",
+  "title": "고객님께 추천드리는 매물",
+  "message": "요청하신 조건을 기준으로 공간 구조와 현장 상태를 미리 확인하기 좋은 매물을 추렸습니다.",
+  "propertyIds": ["sample-84a-1503"],
+  "showSearch": false,
+  "showOtherProperties": false,
+  "expiresAt": null,
+  "agent": {
+    "name": "담당 중개사",
+    "phone": "",
+    "agencyName": "샘플 공인중개사무소"
+  }
+}

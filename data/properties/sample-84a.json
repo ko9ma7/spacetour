@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "sample-84a-1503",
+  "slug": "sample-84a-1503",
+  "status": "active",
+  "listingMode": "link",
+  "title": "OO아파트 84A",
+  "subtitle": "방문 전 구조와 실제 공간을 먼저 확인해보세요",
+  "propertyType": "apartment",
+  "templateId": "tpl-apartment-standard",
+  "project": {
+    "name": "OO아파트",
+    "typeName": "84A"
+  },
+  "facts": {
+    "price": 1530000000,
+    "priceLabel": "15억 3,000만원",
+    "building": "101동",
+    "unit": "1503호",
+    "floor": "15층",
+    "direction": "남향",
+    "supplyAreaM2": 112.4,
+    "exclusiveAreaM2": 84.9,
+    "rooms": 3,
+    "bathrooms": 2,
+    "maintenanceFee": "월 약 28만원",
+    "parking": "세대당 약 1.4대",
+    "moveInDate": "협의"
+  },
+  "visibility": {
+    "price": true,
+    "priceMode": "exact",
+    "address": true,
+    "addressPrecision": "complex",
+    "building": true,
+    "unit": false,
+    "floor": true,
+    "direction": true,
+    "area": true,
+    "rooms": true,
+    "bathrooms": true,
+    "maintenanceFee": false,
+    "parking": true,
+    "moveInDate": false,
+    "map": true,
+    "roadview": true,
+    "contact": true,
+    "description": true
+  },
+  "location": {
+    "placeName": "OO아파트",
+    "address": "서울특별시 OO구 OO동",
+    "lat": 37.5445,
+    "lng": 127.056,
+    "publicLabel": "OO아파트"
+  },
+  "salesHighlights": [
+    "남향 거실",
+    "채광 우수",
+    "주차 여유",
+    "생활권 접근성 우수"
+  ],
+  "description": "현장 방문 전 평면도와 실제 촬영 이미지를 함께 비교해 구조와 동선을 확인할 수 있는 매물입니다.",
+  "cover": {
+    "src": "cover.webp",
+    "alt": "OO아파트 거실 대표 이미지"
+  },
+  "floorplan": {
+    "src": "floorplan.webp",
+    "alt": "84A 평면도",
+    "hotspots": [
+      {"id":"hs-living","sceneId":"living","x":0.45,"y":0.52,"directionDeg":15},
+      {"id":"hs-kitchen","sceneId":"kitchen","x":0.70,"y":0.48,"directionDeg":-90},
+      {"id":"hs-master","sceneId":"master","x":0.25,"y":0.35,"directionDeg":180}
+    ]
+  },
+  "scenes": [
+    {
+      "id": "living",
+      "name": "거실",
+      "type": "panorama",
+      "description": "남향 통창으로 채광을 확인하기 좋은 공간입니다.",
+      "media": [
+        {"type":"panorama","src":"living-360.webp","label":"거실 360°"},
+        {"type":"photo","src":"living-01.webp","label":"거실 정면"},
+        {"type":"photo","src":"living-view.webp","label":"거실 조망"}
+      ],
+      "preferredMedia": "panorama",
+      "features": ["남향", "확장형", "시스템에어컨"]
+    },
+    {
+      "id": "kitchen",
+      "name": "주방",
+      "type": "gallery",
+      "description": "주방 동선과 수납공간을 사진으로 확인할 수 있습니다.",
+      "media": [
+        {"type":"photo","src":"kitchen-01.webp","label":"주방 전경"},
+        {"type":"photo","src":"kitchen-02.webp","label":"수납장"}
+      ],
+      "preferredMedia": "photo"
+    },
+    {
+      "id": "master",
+      "name": "안방",
+      "type": "photo",
+      "media": [
+        {"type":"photo","src":"master-01.webp","label":"안방"}
+      ],
+      "preferredMedia": "photo"
+    },
+    {
+      "id": "whole-3d",
+      "name": "전체 3D 투어",
+      "type": "external3d",
+      "media": [
+        {"type":"external3d","url":"","provider":"matterport","label":"전체 공간 3D"}
+      ],
+      "preferredMedia": "external3d",
+      "enabled": false
+    }
+  ],
+  "guidedTour": {
+    "enabled": true,
+    "steps": ["living", "kitchen", "master"]
+  },
+  "contact": {
+    "agentName": "담당 중개사",
+    "phone": "",
+    "kakaoUrl": ""
+  },
+  "seo": {
+    "title": "OO아파트 84A 공간투어",
+    "description": "OO아파트 84A의 평면도, 사진, 360° 공간을 방문 전에 확인하세요."
+  },
+  "updatedAt": "2026-09-11T13:00:00+09:00"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tpl-apartment-standard",
+  "name": "아파트 기본형",
+  "propertyType": "apartment",
+  "defaultVisibility": {
+    "price": true,
+    "priceMode": "exact",
+    "address": true,
+    "addressPrecision": "complex",
+    "building": true,
+    "unit": false,
+    "floor": true,
+    "direction": true,
+    "area": true,
+    "rooms": true,
+    "bathrooms": true,
+    "maintenanceFee": false,
+    "parking": true,
+    "moveInDate": false,
+    "map": true,
+    "roadview": true,
+    "contact": true,
+    "description": true
+  },
+  "scenePresets": [
+    {"id":"entrance","name":"현관","recommendedMedia":"photo"},
+    {"id":"living","name":"거실","recommendedMedia":"panorama"},
+    {"id":"kitchen","name":"주방","recommendedMedia":"gallery"},
+    {"id":"master","name":"안방","recommendedMedia":"panorama"},
+    {"id":"room2","name":"방 2","recommendedMedia":"photo"},
+    {"id":"bathroom","name":"욕실","recommendedMedia":"photo"},
+    {"id":"balcony","name":"발코니 / 조망","recommendedMedia":"gallery"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "spacetour-static",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "content:index": "node scripts/generate-content-index.mjs",
+    "build": "node scripts/build.mjs",
+    "meta:generate": "node scripts/generate-project-meta.mjs",
+    "prepare:publish": "npm run meta:generate && npm run build"
+  }
+}

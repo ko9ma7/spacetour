@@ -1,0 +1,32 @@
+{
+  "productName": "SpaceTour",
+  "taglineKo": "방문 전 사진·360°·평면도·지도까지 확인하는 부동산 공간 프레젠테이션",
+  "taglineEn": "Property preview platform with photos, 360° tours, floor plans, maps, and selective sharing.",
+  "description": "SpaceTour — 사진, 360° 파노라마, 평면도 Hotspot, 지도, 선택 공유를 지원하는 GitHub Pages 기반 부동산 공간 프레젠테이션 서비스.",
+  "homepageMode": "github-pages",
+  "topics": [
+    "real-estate",
+    "proptech",
+    "virtual-tour",
+    "property-tour",
+    "360-viewer",
+    "panorama",
+    "floorplan",
+    "property-listing",
+    "real-estate-marketing",
+    "apartment",
+    "webgl",
+    "github-pages",
+    "kakao-maps",
+    "naver-maps"
+  ],
+  "features": [
+    "일반 사진·갤러리·360°·동영상·외부 3D를 공간별로 혼합",
+    "평면도 Hotspot과 실제 촬영 공간 연결",
+    "가격·동·호수·주소·지도 등 항목별 공개 범위 설정",
+    "공개 / 링크 전용 / 컬렉션 / 비공개 노출 모드",
+    "타입 템플릿과 기존 매물 복제로 반복 등록 단축",
+    "고객용 Viewer와 로컬 관리자 Studio 완전 분리",
+    "GitHub Actions 기반 정적 빌드와 Pages 자동 배포"
+  ]
+}

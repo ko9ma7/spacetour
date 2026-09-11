@@ -1,0 +1,14 @@
+{
+  "name": "SpaceTour — 인터랙티브 부동산 공간 뷰어",
+  "short_name": "SpaceTour",
+  "description": "평면도, 사진, 360° 공간과 3D 투어를 한 링크로 공유하는 정적 웹서비스",
+  "start_url": "./#/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8fa",
+  "theme_color": "#111827",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

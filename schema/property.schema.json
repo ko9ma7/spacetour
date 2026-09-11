@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schema/property.schema.json",
+  "title": "SpaceTour Property",
+  "type": "object",
+  "required": ["id", "slug", "status", "listingMode", "title", "visibility", "scenes"],
+  "properties": {
+    "id": {"type":"string","minLength":1},
+    "slug": {"type":"string","pattern":"^[a-z0-9][a-z0-9-]*$"},
+    "status": {"enum":["draft","active","negotiating","sold","hidden"]},
+    "listingMode": {"enum":["public","link","collection","private"]},
+    "title": {"type":"string","minLength":1},
+    "visibility": {"type":"object"},
+    "scenes": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["id","name","type","media"],
+        "properties": {
+          "id":{"type":"string"},
+          "name":{"type":"string"},
+          "type":{"enum":["photo","gallery","panorama","video","external3d","mixed"]},
+          "preferredMedia":{"enum":["photo","panorama","video","external3d"]},
+          "media":{"type":"array"}
+        }
+      }
+    }
+  }
+}
