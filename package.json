@@ -1,0 +1,11 @@
+{
+  "name": "spacetour-static",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "content:index": "node scripts/generate-content-index.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
