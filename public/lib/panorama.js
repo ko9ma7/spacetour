@@ -1,12 +1,13 @@
 export class PanoramaViewer {
-  constructor(container, src, label = '360° 공간') {
+  constructor(container, src, label = '360° 공간', options = {}) {
     this.container = container;
     this.canvas = document.createElement('canvas');
     this.canvas.className = 'pano-canvas';
     this.canvas.setAttribute('aria-label', label);
     this.container.replaceChildren(this.canvas);
     this.gl = this.canvas.getContext('webgl', { antialias: true, alpha: false });
-    this.yaw = 0; this.pitch = 0; this.fov = 78; this.dragging = false;
+    this.yaw = Number.isFinite(options.initialYawDeg) ? options.initialYawDeg * Math.PI / 180 : 0; this.pitch = 0; this.fov = 78; this.dragging = false;
+    this.onViewChange = typeof options.onViewChange === 'function' ? options.onViewChange : null;
     if (!this.gl) { this.fallback(src); return; }
     this.initGL(); this.bind(); this.load(src);
   }
@@ -38,6 +39,6 @@ export class PanoramaViewer {
     c.addEventListener('pointerup',()=>this.dragging=false); c.addEventListener('pointercancel',()=>this.dragging=false);
     c.addEventListener('wheel',e=>{e.preventDefault();this.fov=Math.max(38,Math.min(105,this.fov+Math.sign(e.deltaY)*4));this.render();},{passive:false});
   }
-  render(){if(!this.gl||!this.ready)return;const gl=this.gl;gl.viewport(0,0,this.canvas.width,this.canvas.height);gl.uniform1f(this.u.yaw,this.yaw);gl.uniform1f(this.u.pitch,this.pitch);gl.uniform1f(this.u.fov,this.fov*Math.PI/180);gl.uniform1f(this.u.aspect,this.canvas.width/this.canvas.height);gl.drawArrays(gl.TRIANGLES,0,6);}
+  render(){if(!this.gl||!this.ready)return;const gl=this.gl;gl.viewport(0,0,this.canvas.width,this.canvas.height);gl.uniform1f(this.u.yaw,this.yaw);gl.uniform1f(this.u.pitch,this.pitch);gl.uniform1f(this.u.fov,this.fov*Math.PI/180);gl.uniform1f(this.u.aspect,this.canvas.width/this.canvas.height);gl.drawArrays(gl.TRIANGLES,0,6);this.onViewChange?.({yawDeg:this.yaw*180/Math.PI,pitchDeg:this.pitch*180/Math.PI,fovDeg:this.fov});}
   destroy(){this.ro?.disconnect();this.container.replaceChildren();}
 }

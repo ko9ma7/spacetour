@@ -69,9 +69,27 @@
     "src": "floorplan.webp",
     "alt": "84A 평면도",
     "hotspots": [
-      {"id":"hs-living","sceneId":"living","x":0.45,"y":0.52,"directionDeg":15},
-      {"id":"hs-kitchen","sceneId":"kitchen","x":0.70,"y":0.48,"directionDeg":-90},
-      {"id":"hs-master","sceneId":"master","x":0.25,"y":0.35,"directionDeg":180}
+      {
+        "id": "hs-living",
+        "sceneId": "living",
+        "x": 0.45,
+        "y": 0.52,
+        "directionDeg": 15
+      },
+      {
+        "id": "hs-kitchen",
+        "sceneId": "kitchen",
+        "x": 0.7,
+        "y": 0.48,
+        "directionDeg": -90
+      },
+      {
+        "id": "hs-master",
+        "sceneId": "master",
+        "x": 0.25,
+        "y": 0.35,
+        "directionDeg": 180
+      }
     ]
   },
   "scenes": [
@@ -81,12 +99,28 @@
       "type": "panorama",
       "description": "남향 통창으로 채광을 확인하기 좋은 공간입니다.",
       "media": [
-        {"type":"panorama","src":"living-360.webp","label":"거실 360°"},
-        {"type":"photo","src":"living-01.webp","label":"거실 정면"},
-        {"type":"photo","src":"living-view.webp","label":"거실 조망"}
+        {
+          "type": "panorama",
+          "src": "living-360.webp",
+          "label": "거실 360°"
+        },
+        {
+          "type": "photo",
+          "src": "living-01.webp",
+          "label": "거실 정면"
+        },
+        {
+          "type": "photo",
+          "src": "living-view.webp",
+          "label": "거실 조망"
+        }
       ],
       "preferredMedia": "panorama",
-      "features": ["남향", "확장형", "시스템에어컨"]
+      "features": [
+        "남향",
+        "확장형",
+        "시스템에어컨"
+      ]
     },
     {
       "id": "kitchen",
@@ -94,8 +128,16 @@
       "type": "gallery",
       "description": "주방 동선과 수납공간을 사진으로 확인할 수 있습니다.",
       "media": [
-        {"type":"photo","src":"kitchen-01.webp","label":"주방 전경"},
-        {"type":"photo","src":"kitchen-02.webp","label":"수납장"}
+        {
+          "type": "photo",
+          "src": "kitchen-01.webp",
+          "label": "주방 전경"
+        },
+        {
+          "type": "photo",
+          "src": "kitchen-02.webp",
+          "label": "수납장"
+        }
       ],
       "preferredMedia": "photo"
     },
@@ -104,7 +146,11 @@
       "name": "안방",
       "type": "photo",
       "media": [
-        {"type":"photo","src":"master-01.webp","label":"안방"}
+        {
+          "type": "photo",
+          "src": "master-01.webp",
+          "label": "안방"
+        }
       ],
       "preferredMedia": "photo"
     },
@@ -113,7 +159,12 @@
       "name": "전체 3D 투어",
       "type": "external3d",
       "media": [
-        {"type":"external3d","url":"","provider":"matterport","label":"전체 공간 3D"}
+        {
+          "type": "external3d",
+          "url": "",
+          "provider": "matterport",
+          "label": "전체 공간 3D"
+        }
       ],
       "preferredMedia": "external3d",
       "enabled": false
@@ -121,7 +172,11 @@
   ],
   "guidedTour": {
     "enabled": true,
-    "steps": ["living", "kitchen", "master"]
+    "steps": [
+      "living",
+      "kitchen",
+      "master"
+    ]
   },
   "contact": {
     "agentName": "담당 중개사",
@@ -132,5 +187,8 @@
     "title": "OO아파트 84A 공간투어",
     "description": "OO아파트 84A의 평면도, 사진, 360° 공간을 방문 전에 확인하세요."
   },
-  "updatedAt": "2026-09-11T13:00:00+09:00"
+  "updatedAt": "2026-09-11T13:00:00+09:00",
+  "floorPlan": {
+    "northDeg": 225
+  }
 }

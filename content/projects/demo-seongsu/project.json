@@ -15,17 +15,74 @@
     "image": "floorplan.webp",
     "alt": "성수 리버뷰 84A 데모 평면도",
     "hotspots": [
-      { "id": "hs-living", "x": 0.47, "y": 0.55, "label": "거실 360°", "targetMediaId": "living-360", "kind": "media" },
-      { "id": "hs-kitchen", "x": 0.73, "y": 0.47, "label": "주방", "targetMediaId": "kitchen-photo", "kind": "media" },
-      { "id": "hs-bedroom", "x": 0.27, "y": 0.33, "label": "안방", "targetMediaId": "bedroom-photo", "kind": "media" },
-      { "id": "hs-view", "x": 0.48, "y": 0.18, "label": "조망", "targetMediaId": "view-photo", "kind": "media" }
-    ]
+      {
+        "id": "hs-living",
+        "x": 0.47,
+        "y": 0.55,
+        "label": "거실 360°",
+        "targetMediaId": "living-360",
+        "kind": "media",
+        "directionDeg": 0
+      },
+      {
+        "id": "hs-kitchen",
+        "x": 0.73,
+        "y": 0.47,
+        "label": "주방",
+        "targetMediaId": "kitchen-photo",
+        "kind": "media",
+        "directionDeg": 270
+      },
+      {
+        "id": "hs-bedroom",
+        "x": 0.27,
+        "y": 0.33,
+        "label": "안방",
+        "targetMediaId": "bedroom-photo",
+        "kind": "media",
+        "directionDeg": 90
+      },
+      {
+        "id": "hs-view",
+        "x": 0.48,
+        "y": 0.18,
+        "label": "조망",
+        "targetMediaId": "view-photo",
+        "kind": "media",
+        "directionDeg": 180
+      }
+    ],
+    "northDeg": 225
   },
   "media": [
-    { "id": "living-360", "type": "panorama", "title": "거실 360°", "src": "panorama-01.webp", "description": "거실 중앙에서 둘러보는 360° 공간" },
-    { "id": "kitchen-photo", "type": "photo", "title": "주방", "src": "photo-01.webp", "description": "거실과 연결되는 오픈형 주방" },
-    { "id": "bedroom-photo", "type": "photo", "title": "안방", "src": "photo-02.webp", "description": "붙박이장과 창호 배치 확인" },
-    { "id": "view-photo", "type": "photo", "title": "거실 조망", "src": "photo-03.webp", "description": "남동향 창가 기준 데모 조망" }
+    {
+      "id": "living-360",
+      "type": "panorama",
+      "title": "거실 360°",
+      "src": "panorama-01.webp",
+      "description": "거실 중앙에서 둘러보는 360° 공간"
+    },
+    {
+      "id": "kitchen-photo",
+      "type": "photo",
+      "title": "주방",
+      "src": "photo-01.webp",
+      "description": "거실과 연결되는 오픈형 주방"
+    },
+    {
+      "id": "bedroom-photo",
+      "type": "photo",
+      "title": "안방",
+      "src": "photo-02.webp",
+      "description": "붙박이장과 창호 배치 확인"
+    },
+    {
+      "id": "view-photo",
+      "type": "photo",
+      "title": "거실 조망",
+      "src": "photo-03.webp",
+      "description": "남동향 창가 기준 데모 조망"
+    }
   ],
   "contact": {
     "name": "SpaceTour 데모",

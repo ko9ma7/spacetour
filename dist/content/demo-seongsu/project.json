@@ -21,7 +21,8 @@
         "y": 0.55,
         "label": "거실 360°",
         "targetMediaId": "living-360",
-        "kind": "media"
+        "kind": "media",
+        "directionDeg": 0
       },
       {
         "id": "hs-kitchen",
@@ -29,7 +30,8 @@
         "y": 0.47,
         "label": "주방",
         "targetMediaId": "kitchen-photo",
-        "kind": "media"
+        "kind": "media",
+        "directionDeg": 270
       },
       {
         "id": "hs-bedroom",
@@ -37,7 +39,8 @@
         "y": 0.33,
         "label": "안방",
         "targetMediaId": "bedroom-photo",
-        "kind": "media"
+        "kind": "media",
+        "directionDeg": 90
       },
       {
         "id": "hs-view",
@@ -45,9 +48,11 @@
         "y": 0.18,
         "label": "조망",
         "targetMediaId": "view-photo",
-        "kind": "media"
+        "kind": "media",
+        "directionDeg": 180
       }
-    ]
+    ],
+    "northDeg": 225
   },
   "media": [
     {
