@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-09-11T02:32:22.276Z",
+  "items": [
+    {
+      "slug": "demo-seongsu",
+      "title": "성수 리버뷰 84A",
+      "subtitle": "SEOUL · APARTMENT · 84A",
+      "status": "공급중",
+      "cover": "content/demo-seongsu/cover.webp",
+      "address": "서울 성동구 성수동 · 데모 주소",
+      "priceLabel": "분양 상담",
+      "areaLabel": "전용 84.9㎡",
+      "updatedAt": "2026-09-11T01:00:00.000Z",
+      "manifest": "content/demo-seongsu/project.json",
+      "mediaCount": 4,
+      "hasPanorama": true,
+      "hasFloorPlan": true
+    }
+  ]
+}
